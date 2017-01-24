@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="node_modules/jquery-ui/themes/base/all.css">
+  </head>
+  <body>
+    <form>
+      <p>
+        <label>A date picker:<br>
+          <input type="date" name="date">
+        </label>
+      </p>
+      <p>
+        <label>A range slider:<br>
+          <input type="range" name="range">
+        </label>
+      </p>
+      <p>
+        <label>A number:<br>
+          <input type="number" name="number">
+        </label>
+      </p>
+      <p>
+        Checkboxes:<br>
+        <label><input type="checkbox" name="c1" value="c1"> Box 1</label><br>
+        <label><input type="checkbox" name="c2" value="c2" checked> Box 2</label><br>
+        <label><input type="checkbox" name="c3" value="c3"> Box 3</label><br>
+      </p>
+      <p>
+        Radio buttons:<br>
+        <label><input type="radio" name="r" value="r1"> Button 1</label><br>
+        <label><input type="radio" name="r" value="r2" checked> Button 2</label><br>
+        <label><input type="radio" name="r" value="r3"> Button 3</label><br>
+      </p>
+      <p>
+        <label>A select list:<br>
+          <select name="speed">
+            <option>Slower</option>
+            <option>Slow</option>
+            <option selected>Medium</option>
+            <option>Fast</option>
+            <option>Faster</option>
+          </select>
+        </label>
+      </p>
+      <p>
+        <button>submit</button>
+      </p>
+    </form>
+    <script src="dist/hyperform-ui.js"></script>
+    <script>hfui();</script>
+  </body>
+</html>
