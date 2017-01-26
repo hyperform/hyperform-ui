@@ -29,21 +29,23 @@ export default function(ctx=document) {
     this.className += ' hfui-hidden';
 
     const defaultDate = this.valueAsDate;
+    const dp_options = {
+      altField: this,
+      altFormat: 'yy-mm-dd',
+      changeMonth: true,
+      changeYear: true,
+      yearRange: 'c-100:c+100',
+      maxDate: string_to_date(this.getAttribute('max')),
+      minDate: string_to_date(this.getAttribute('min')),
+    };
+
     const $widget = $('<input>', {
-        'class': 'hfui-widget hfui-date',
+        'class': 'hfui-widget hfui-date ui-widget ui-widget-content ui-corner-all',
         type: 'text',
         value: $.datepicker.formatDate($.datepicker.regional[''].dateFormat,
                                        defaultDate),
       })
-      .datepicker({
-        altField: this,
-        altFormat: 'yy-mm-dd',
-        changeMonth: true,
-        changeYear: true,
-        yearRange: 'c-100:c+100',
-        maxDate: string_to_date(this.getAttribute('max')),
-        minDate: string_to_date(this.getAttribute('min')),
-      });
+      .datepicker(dp_options);
 
     $widget[0].readOnly = this.readOnly;
     $widget[0].disabled = this.disabled;

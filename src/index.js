@@ -8,6 +8,7 @@ import number from './type/number';
 import radio from './type/radio';
 import range from './type/range';
 import select from './type/select';
+import time from './type/time';
 
 
 export default function hfui(ctx=document) {
@@ -18,6 +19,7 @@ export default function hfui(ctx=document) {
   radio(ctx);
   range(ctx);
   select(ctx);
+  time(ctx);
 }
 
 /* until I can configure Webpack to do that automatically: */
