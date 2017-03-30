@@ -37,6 +37,7 @@ export default function(ctx=document) {
       yearRange: 'c-100:c+100',
       maxDate: string_to_date(this.getAttribute('max')),
       minDate: string_to_date(this.getAttribute('min')),
+      showOn: 'both',
     };
 
     const $widget = $('<input>', {

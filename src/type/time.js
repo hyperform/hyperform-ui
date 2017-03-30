@@ -48,12 +48,14 @@ export default function(ctx=document) {
 
     const $drop_down_button = $('<button>', {
       type: 'button',
+      'class': 'ui-widget',
+      html: '\u00A0',
     })
       .button({
         icons: {
-          primary: 'ui-icon-triangle-1-s',
+          primary: 'ui-icon-clock',
         },
-        text: false,
+        showLabel: false,
       })
       .on('click', () => $this.autocomplete('search', ''));
 
